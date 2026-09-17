@@ -1,0 +1,226 @@
+# API Design Skill
+
+## Objetivo
+
+Projetar e implementar APIs simples, consistentes, seguras, performáticas e fáceis de manter.
+
+## Princípios
+
+- Priorizar simplicidade.
+- Manter contratos claros.
+- Utilizar padrões consistentes.
+- Evitar endpoints desnecessários.
+- Retornar somente os dados necessários.
+- Validar entradas sempre no servidor.
+- Não expor informações internas.
+
+## Estrutura
+
+Organizar responsabilidades separadamente quando o projeto permitir:
+
+- routes
+- controllers
+- services
+- repositories
+- schemas
+- types
+- middleware
+- utils
+
+Não criar camadas apenas por formalidade.
+
+Se o projeto já possuir uma arquitetura, respeitá-la.
+
+## Endpoints
+
+Criar endpoints com nomes claros e previsíveis.
+
+Preferir recursos e operações bem definidos.
+
+Evitar endpoints excessivamente específicos quando uma solução reutilizável resolver o problema.
+
+## HTTP
+
+Utilizar métodos HTTP corretamente:
+
+- GET para leitura
+- POST para criação
+- PUT/PATCH para atualização
+- DELETE para remoção
+
+Utilizar códigos HTTP apropriados.
+
+Exemplos:
+
+- 200 para sucesso
+- 201 para criação
+- 204 quando não houver conteúdo de resposta
+- 400 para requisição inválida
+- 401 para autenticação ausente ou inválida
+- 403 para acesso não permitido
+- 404 para recurso inexistente
+- 409 para conflito
+- 422 para dados semanticamente inválidos
+- 429 para excesso de requisições
+- 500 para erro interno
+
+## Validação
+
+Validar todas as entradas no servidor.
+
+Validar:
+
+- tipos
+- formatos
+- tamanhos
+- valores permitidos
+- parâmetros
+- query strings
+- body
+- headers quando necessário
+
+Nunca confiar apenas na validação do front-end.
+
+## Respostas
+
+Manter formato consistente.
+
+Retornar somente os dados necessários.
+
+Não enviar:
+
+- senhas
+- tokens privados
+- credenciais
+- stack traces
+- informações internas
+- dados que o cliente não precisa
+
+## Erros
+
+Erros devem ser previsíveis e úteis para o consumidor da API.
+
+Mensagens externas devem ser claras sem revelar detalhes internos.
+
+Registrar detalhes técnicos no sistema de logs quando apropriado.
+
+## Autenticação
+
+Quando houver autenticação:
+
+- validar credenciais no servidor
+- proteger endpoints privados
+- verificar permissões
+- expirar sessões ou tokens quando apropriado
+- nunca armazenar segredos diretamente no código
+
+Seguir também `security.md`.
+
+## Autorização
+
+Não confiar apenas na interface para controlar permissões.
+
+Toda operação protegida deve verificar autorização no servidor.
+
+## Paginação
+
+Para listas potencialmente grandes, utilizar paginação.
+
+Evitar retornar milhares de registros em uma única requisição.
+
+Quando necessário, permitir:
+
+- page
+- limit
+- cursor
+- filtros
+- ordenação
+
+Seguir o padrão já utilizado pelo projeto.
+
+## Performance
+
+Evitar:
+
+- chamadas duplicadas
+- consultas desnecessárias
+- payloads gigantes
+- processamento repetido
+- operações bloqueantes desnecessárias
+
+Utilizar cache quando houver benefício real.
+
+## Banco de dados
+
+Evitar consultas N+1.
+
+Selecionar somente os campos necessários.
+
+Utilizar índices quando apropriado.
+
+Não colocar lógica complexa de banco diretamente nas rotas quando a arquitetura do projeto permitir separação.
+
+Seguir também `database.md` quando disponível.
+
+## Segurança
+
+Sempre:
+
+- validar entradas
+- utilizar consultas parametrizadas
+- proteger endpoints
+- limitar requisições quando necessário
+- evitar exposição de dados sensíveis
+- tratar erros corretamente
+
+## Compatibilidade
+
+Não quebrar contratos existentes sem necessidade.
+
+Antes de alterar uma API existente:
+
+1. verificar consumidores atuais
+2. avaliar impacto
+3. preservar compatibilidade quando possível
+4. alterar versões quando necessário
+
+## Documentação
+
+Quando apropriado, documentar:
+
+- endpoint
+- método
+- parâmetros
+- body
+- resposta
+- erros
+- autenticação
+
+Não criar documentação extensa para endpoints triviais quando o projeto não exigir.
+
+## Regra de eficiência
+
+Antes de criar um novo endpoint, verificar se um endpoint existente pode resolver a necessidade.
+
+Antes de criar uma nova chamada, verificar se os dados já estão disponíveis.
+
+Evitar abstrações e camadas que não tragam benefício real.
+
+## Revisão
+
+Antes de finalizar uma API, verificar:
+
+- contrato
+- validação
+- autenticação
+- autorização
+- erros
+- códigos HTTP
+- performance
+- segurança
+- payload
+- compatibilidade
+
+## Resultado esperado
+
+APIs previsíveis, seguras, rápidas, consistentes e fáceis de consumir e manter, com o mínimo de complexidade necessário.

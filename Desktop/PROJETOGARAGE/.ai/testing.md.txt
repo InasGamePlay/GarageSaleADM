@@ -1,0 +1,200 @@
+# Testing Skill
+
+## Objetivo
+
+Criar e manter testes úteis, confiáveis e proporcionais ao risco da alteração, garantindo que o código funcione sem criar complexidade ou testes desnecessários.
+
+## Princípio principal
+
+Testar comportamento, não implementação interna.
+
+Um teste deve responder:
+
+"Essa funcionalidade funciona como o usuário ou sistema espera?"
+
+## Antes de criar testes
+
+Identificar:
+
+1. o comportamento esperado
+2. os casos principais
+3. os casos de erro
+4. os casos extremos relevantes
+5. os riscos da alteração
+
+Não criar testes apenas para aumentar cobertura numérica.
+
+## Estratégia
+
+Priorizar:
+
+1. testes unitários para lógica isolada
+2. testes de integração para interação entre partes
+3. testes de componentes quando necessário
+4. testes end-to-end para fluxos críticos
+
+Escolher o nível mais simples que valide corretamente o comportamento.
+
+## Testes unitários
+
+Utilizar para:
+
+- funções puras
+- regras de negócio
+- transformações de dados
+- validações
+- cálculos
+- utilitários
+
+Evitar testar detalhes internos sem valor para o comportamento.
+
+## Testes de integração
+
+Utilizar quando houver interação entre:
+
+- serviços
+- banco de dados
+- APIs
+- autenticação
+- módulos
+- componentes importantes
+
+Preferir testar a integração real quando isso for viável e confiável.
+
+## Testes de componentes
+
+Verificar:
+
+- renderização
+- interação
+- estados
+- formulários
+- mensagens
+- acessibilidade
+- comportamento esperado
+
+Não testar apenas detalhes visuais frágeis.
+
+## Testes end-to-end
+
+Utilizar para fluxos críticos, como:
+
+- login
+- cadastro
+- checkout
+- pagamentos
+- criação de dados
+- operações importantes
+
+Não transformar todo teste em E2E.
+
+## Casos de teste
+
+Para cada funcionalidade relevante, considerar:
+
+### Caminho feliz
+O fluxo funciona corretamente com dados válidos.
+
+### Entrada inválida
+O sistema rejeita dados incorretos de maneira adequada.
+
+### Casos extremos
+Considerar valores vazios, limites, grandes quantidades e estados inesperados quando forem relevantes.
+
+### Erros externos
+Verificar comportamento quando APIs, banco ou serviços externos falharem.
+
+## Testes de regressão
+
+Quando corrigir um bug:
+
+1. reproduzir o problema
+2. criar ou atualizar um teste que represente o problema
+3. corrigir a causa
+4. executar o teste
+5. verificar funcionalidades relacionadas
+
+## Mocks
+
+Utilizar mocks somente quando necessário.
+
+Evitar mockar tudo.
+
+Mocks excessivos podem esconder problemas reais de integração.
+
+## Dados de teste
+
+Utilizar dados claros e previsíveis.
+
+Não utilizar dados reais ou informações sensíveis.
+
+Criar fixtures ou factories quando houver repetição significativa.
+
+## Determinismo
+
+Testes devem ser previsíveis.
+
+Evitar dependência desnecessária de:
+
+- horário real
+- rede externa
+- ordem de execução
+- dados externos
+- estado compartilhado
+
+Quando necessário, controlar essas dependências.
+
+## Performance
+
+Não criar testes excessivamente lentos.
+
+Testes rápidos devem validar a maior parte da lógica.
+
+Utilizar E2E apenas onde houver benefício real.
+
+## Manutenção
+
+Testes devem ser fáceis de entender e atualizar.
+
+Evitar:
+
+- duplicação excessiva
+- seletores frágeis
+- dependências desnecessárias
+- testes gigantes
+- lógica complexa dentro dos próprios testes
+
+## Cobertura
+
+Cobertura é um indicador, não o objetivo final.
+
+Priorizar código de maior risco e importância.
+
+Não criar testes artificiais apenas para aumentar porcentagens.
+
+## Ao modificar código existente
+
+Antes de alterar:
+
+- verificar testes existentes
+- entender comportamento esperado
+- preservar testes válidos
+
+Depois de alterar:
+
+- executar testes relevantes
+- verificar tipos
+- verificar build quando apropriado
+- verificar regressões
+
+## Regra de eficiência
+
+Criar a menor quantidade de testes necessária para obter confiança suficiente.
+
+Não testar trivialidades sem risco.
+
+Não duplicar testes que validam exatamente o mesmo comportamento.
+
+## Resultado esperado
+
+Uma suíte de testes confiável, objetiva e sustentável, capaz de detectar regressões e validar comportamentos importantes sem gerar complexidade desnecessária.

@@ -1,0 +1,193 @@
+# Refactoring Skill
+
+## Objetivo
+
+Melhorar código existente sem alterar seu comportamento esperado, reduzindo complexidade, duplicação e dificuldade de manutenção.
+
+## Princípio principal
+
+Refatorar somente quando houver benefício real.
+
+Não reescrever código apenas por preferência pessoal.
+
+Antes de alterar:
+
+1. entender o código atual
+2. identificar o problema
+3. preservar o comportamento existente
+4. escolher a menor mudança que resolva o problema
+5. verificar possíveis impactos
+
+## Prioridades
+
+Priorizar melhorias nesta ordem:
+
+1. correção
+2. legibilidade
+3. manutenção
+4. reutilização
+5. performance
+6. arquitetura
+
+Não sacrificar correção por uma abstração mais elegante.
+
+## Código duplicado
+
+Identificar duplicação real antes de abstrair.
+
+Não criar abstrações prematuras.
+
+Extrair funções ou componentes quando:
+
+- existe repetição significativa
+- a lógica possui responsabilidade própria
+- a abstração melhora a manutenção
+- o comportamento pode ser claramente definido
+
+## Funções
+
+Funções devem possuir responsabilidades claras.
+
+Quando uma função estiver fazendo coisas demais:
+
+1. identificar responsabilidades
+2. separar partes independentes
+3. extrair funções pequenas
+4. preservar o comportamento original
+
+Evitar criar dezenas de funções minúsculas sem benefício.
+
+## Componentes
+
+Em React ou Next.js:
+
+- evitar componentes gigantes
+- separar responsabilidades
+- reutilizar componentes existentes
+- separar lógica complexa quando necessário
+- evitar criar abstrações apenas para reduzir algumas linhas
+
+Não transformar cada pequeno elemento em um componente sem necessidade.
+
+## Estado
+
+Eliminar estado duplicado quando possível.
+
+Preferir valores derivados em vez de armazenar informações que podem ser calculadas.
+
+Não utilizar estado global para informações que podem permanecer locais.
+
+## Tipos
+
+Melhorar tipos quando isso aumentar segurança e clareza.
+
+Evitar:
+
+- `any` desnecessário
+- casts excessivos
+- tipos duplicados
+- interfaces difíceis de compreender
+
+Preferir tipos simples e reutilizáveis.
+
+## Arquitetura
+
+Respeitar a arquitetura existente antes de propor mudanças estruturais.
+
+Não mover dezenas de arquivos sem necessidade.
+
+Se uma mudança arquitetural for necessária:
+
+1. explicar o motivo
+2. definir impacto
+3. fazer alterações incrementais
+4. preservar compatibilidade quando possível
+
+## Performance
+
+Não realizar otimizações especulativas.
+
+Antes de otimizar:
+
+- identificar gargalo
+- medir quando possível
+- corrigir a causa
+- verificar resultado
+
+Não utilizar memoização, cache ou abstrações complexas sem benefício comprovado.
+
+## Dependências
+
+Antes de adicionar uma dependência:
+
+- verificar recursos nativos
+- verificar dependências existentes
+- avaliar custo
+- avaliar manutenção
+
+Preferir soluções existentes no projeto.
+
+## Segurança
+
+Uma refatoração nunca deve remover:
+
+- validação
+- autenticação
+- autorização
+- sanitização
+- proteção de dados
+- tratamento de erros
+
+Seguir também `security.md`.
+
+## Escopo
+
+Manter a refatoração limitada ao problema identificado.
+
+Não misturar:
+
+- refatoração
+- mudança de design
+- atualização de dependências
+- mudança de arquitetura
+
+na mesma alteração, salvo quando necessário.
+
+## Compatibilidade
+
+Preservar:
+
+- APIs existentes
+- contratos
+- comportamento esperado
+- nomes públicos
+- integrações
+
+quando não houver motivo para quebrá-los.
+
+## Verificação
+
+Depois da refatoração:
+
+- revisar diferenças
+- verificar tipos
+- executar testes quando disponíveis
+- verificar build quando apropriado
+- verificar comportamento relacionado
+- procurar regressões
+
+## Regra de eficiência
+
+Preferir:
+
+"menor mudança que produz maior melhoria"
+
+em vez de:
+
+"reescrever tudo da forma ideal".
+
+Não modificar código que já está funcionando sem benefício claro.
+
+## Resultado esperado
+
+Código mais simples, legível, reutilizável e fácil de manter, preservando o comportamento existente e evitando mudanças desnecessárias.

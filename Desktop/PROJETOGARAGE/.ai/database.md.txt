@@ -1,0 +1,205 @@
+# Database Skill
+
+## Objetivo
+
+Projetar e implementar acesso a dados de forma segura, eficiente, consistente e escalável, evitando consultas desnecessárias e problemas de performance.
+
+## Princípios
+
+- Manter o modelo de dados simples.
+- Evitar duplicação desnecessária.
+- Priorizar integridade dos dados.
+- Buscar somente os dados necessários.
+- Evitar consultas repetidas.
+- Respeitar a arquitetura existente do projeto.
+- Não introduzir ORM ou biblioteca nova sem necessidade.
+
+## Modelagem
+
+Antes de criar ou alterar tabelas:
+
+1. entender os relacionamentos existentes
+2. verificar entidades já existentes
+3. evitar duplicação de informações
+4. definir chaves primárias corretamente
+5. definir relacionamentos e restrições apropriadas
+
+Não criar tabelas ou campos redundantes sem motivo.
+
+## Consultas
+
+As consultas devem:
+
+- retornar somente as colunas necessárias
+- utilizar filtros adequados
+- evitar operações desnecessárias
+- evitar consultas dentro de loops
+- evitar múltiplas consultas quando uma solução melhor existir
+
+Nunca utilizar `SELECT *` quando não for necessário.
+
+## N+1
+
+Identificar e evitar o problema de N+1 queries.
+
+Quando necessário:
+
+- utilizar joins
+- utilizar includes apropriados
+- buscar dados em lote
+- utilizar consultas agregadas
+
+Escolher a solução mais simples compatível com o banco e ORM utilizado.
+
+## Índices
+
+Criar índices quando houver benefício real.
+
+Considerar índices para:
+
+- colunas utilizadas frequentemente em filtros
+- chaves estrangeiras
+- ordenações frequentes
+- consultas críticas
+
+Não criar índices indiscriminadamente.
+
+Índices também possuem custo de armazenamento e escrita.
+
+## Paginação
+
+Nunca carregar grandes quantidades de dados sem necessidade.
+
+Para listas grandes, utilizar:
+
+- limit/offset
+- cursor pagination
+- paginação baseada em chave
+
+Escolher a estratégia adequada ao caso.
+
+## Transações
+
+Utilizar transações quando várias operações precisarem ser tratadas como uma única unidade.
+
+Exemplo:
+
+1. criar registro
+2. atualizar registro relacionado
+3. registrar operação
+
+Se uma etapa falhar, garantir consistência dos dados.
+
+Não utilizar transações desnecessariamente em operações independentes.
+
+## Concorrência
+
+Considerar condições de corrida em operações críticas.
+
+Quando necessário utilizar:
+
+- transações
+- constraints
+- locks
+- operações atômicas
+
+Preferir mecanismos de integridade do banco quando forem suficientes.
+
+## Integridade
+
+Utilizar recursos do banco quando apropriado:
+
+- primary keys
+- foreign keys
+- unique constraints
+- not null
+- check constraints
+
+Não depender exclusivamente do código da aplicação para garantir integridade.
+
+## Segurança
+
+Nunca:
+
+- concatenar SQL com entrada do usuário
+- expor credenciais
+- retornar dados sensíveis desnecessariamente
+- permitir acesso direto não autorizado
+
+Utilizar queries parametrizadas ou mecanismos seguros do ORM.
+
+## Migrations
+
+Alterações estruturais devem utilizar migrations quando o projeto possuir esse mecanismo.
+
+Migrations devem ser:
+
+- reproduzíveis
+- versionadas
+- pequenas
+- previsíveis
+
+Não alterar produção manualmente quando o projeto possuir fluxo de migrations.
+
+## Performance
+
+Antes de otimizar:
+
+1. identificar o gargalo
+2. analisar a consulta
+3. verificar índices
+4. verificar quantidade de dados
+5. verificar N+1
+6. medir antes e depois
+
+Não aplicar otimizações especulativas.
+
+## Cache
+
+Utilizar cache somente quando houver benefício real.
+
+Definir claramente:
+
+- o que está sendo armazenado
+- tempo de validade
+- estratégia de invalidação
+
+Evitar cache que gere dados incorretos ou difíceis de invalidar.
+
+## ORM
+
+Quando utilizar ORM:
+
+- seguir os padrões existentes
+- evitar abstrações excessivas
+- verificar queries geradas quando houver dúvida de performance
+- evitar carregar relações desnecessariamente
+
+Não substituir o ORM por SQL manual sem necessidade.
+
+## Revisão
+
+Antes de finalizar alterações no banco, verificar:
+
+- modelagem
+- integridade
+- índices
+- queries
+- N+1
+- paginação
+- transações
+- segurança
+- migrations
+- performance
+
+## Regra de eficiência
+
+Antes de criar uma nova consulta, verificar se os dados necessários já estão disponíveis.
+
+Antes de criar uma nova tabela ou campo, verificar se a estrutura existente pode ser reutilizada.
+
+Preferir a solução mais simples que mantenha integridade, segurança e performance.
+
+## Resultado esperado
+
+Acesso a dados seguro, eficiente, consistente e escalável, evitando consultas desnecessárias, duplicação e complexidade artificial.

@@ -1,0 +1,72 @@
+# TypeScript Skill
+
+Objetivo:
+Escrever TypeScript seguro, legível, previsível, reutilizável e pronto para produção.
+
+Princípios:
+- Priorizar tipagem explícita onde ela melhora clareza.
+- Evitar `any`.
+- Preferir tipos precisos em vez de tipos genéricos.
+- Utilizar inferência de tipos quando ela for clara.
+- Evitar casts (`as`) desnecessários.
+- Manter os tipos próximos ao domínio ao qual pertencem.
+- Reutilizar tipos existentes antes de criar novos.
+
+Tipagem:
+- Preferir `type` para composição de tipos e `interface` quando extensão estrutural fizer sentido.
+- Utilizar unions e intersections quando representarem corretamente o domínio.
+- Utilizar generics quando houver reutilização real.
+- Evitar tipos excessivamente complexos sem necessidade.
+- Representar estados impossíveis como impossíveis através do sistema de tipos.
+
+Null e undefined:
+- Tratar `null` e `undefined` explicitamente quando puderem ocorrer.
+- Não utilizar non-null assertions (`!`) sem necessidade real.
+- Utilizar optional chaining e nullish coalescing quando melhorarem segurança e legibilidade.
+
+Funções:
+- Tipar parâmetros e retornos importantes.
+- Manter funções pequenas e com responsabilidade única.
+- Evitar parâmetros excessivos; utilizar objetos de configuração quando fizer sentido.
+- Evitar funções genéricas demais que aceitam qualquer entrada.
+
+Objetos e dados externos:
+- Nunca confiar que dados externos estão corretamente tipados.
+- Validar dados provenientes de APIs, formulários, banco de dados e usuário.
+- Não confundir TypeScript com validação em runtime.
+- Quando necessário, utilizar schemas de validação existentes no projeto.
+
+Enums:
+- Preferir unions literais quando forem suficientes.
+- Utilizar `enum` somente quando houver benefício real para o projeto.
+
+Erros:
+- Tratar erros de forma explícita.
+- Não esconder erros com `catch` vazio.
+- Evitar lançar strings; utilizar `Error` ou erros específicos.
+- Preservar informações úteis para debugging sem expor dados sensíveis.
+
+Arquitetura:
+- Reutilizar tipos compartilhados.
+- Evitar duplicação de interfaces e tipos.
+- Manter separação entre tipos de domínio, API, UI e infraestrutura quando necessário.
+- Não criar abstrações apenas por antecipação.
+
+Qualidade:
+Antes de finalizar:
+1. Verificar erros de tipagem.
+2. Remover `any` desnecessário.
+3. Remover casts desnecessários.
+4. Verificar possíveis valores nulos ou indefinidos.
+5. Verificar se os tipos representam corretamente o comportamento real.
+6. Evitar complexidade desnecessária.
+7. Preservar os padrões existentes do projeto.
+
+Eficiência:
+- Não criar tipos ou abstrações que não sejam necessários.
+- Não alterar código tipado corretamente sem motivo.
+- Fazer mudanças pequenas e direcionadas.
+- Priorizar clareza sobre sofisticação.
+
+Resultado esperado:
+Código TypeScript seguro, simples, legível, reutilizável, consistente com o projeto e pronto para produção.

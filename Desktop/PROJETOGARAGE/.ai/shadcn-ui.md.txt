@@ -1,0 +1,98 @@
+# shadcn/ui Skill
+
+## Objetivo
+Criar interfaces profissionais, consistentes, acessíveis e reutilizáveis usando shadcn/ui, respeitando a arquitetura existente do projeto.
+
+## Princípios
+- Reutilizar componentes existentes antes de criar novos.
+- Não instalar bibliotecas desnecessárias.
+- Personalizar componentes quando necessário, sem destruir sua estrutura.
+- Priorizar acessibilidade, responsividade e consistência visual.
+- Manter componentes pequenos e com responsabilidades claras.
+
+## Componentes
+Priorizar componentes apropriados para:
+- Button
+- Input
+- Textarea
+- Select
+- Checkbox
+- Switch
+- Dialog
+- Drawer
+- Dropdown
+- Popover
+- Tooltip
+- Tabs
+- Card
+- Table
+- Form
+- Toast
+- Alert
+- Skeleton
+
+Antes de criar um componente novo, verificar se um componente existente pode ser reutilizado ou composto.
+
+## Interface
+Evitar aparência genérica de IA.
+
+Priorizar:
+- hierarquia visual clara
+- espaçamento consistente
+- tipografia equilibrada
+- contraste adequado
+- componentes visualmente coerentes
+- estados de hover, focus, active e disabled
+- microinterações sutis quando agregarem valor
+
+Não adicionar efeitos apenas por estética.
+
+## Tailwind
+Utilizar Tailwind CSS seguindo a skill `tailwindcss.md`.
+
+Evitar:
+- classes excessivamente repetidas
+- valores arbitrários sem necessidade
+- estilos inline
+- CSS duplicado
+
+Quando houver repetição significativa, criar componente reutilizável ou abstração apropriada.
+
+## Acessibilidade
+- Utilizar HTML semântico.
+- Garantir navegação por teclado.
+- Manter indicadores de foco visíveis.
+- Utilizar labels apropriados.
+- Não depender somente de cor para transmitir informação.
+- Utilizar atributos ARIA somente quando necessários.
+- Garantir contraste adequado.
+
+## Responsividade
+Todo componente visual deve funcionar em:
+- mobile
+- tablet
+- desktop
+
+Pensar primeiro na estrutura responsiva e depois nos detalhes visuais.
+
+## Consistência
+Seguir o design system já existente no projeto.
+
+Não criar:
+- novas cores sem necessidade
+- novos padrões de botão sem necessidade
+- componentes visualmente incompatíveis
+- múltiplos estilos para a mesma finalidade
+
+## Performance
+Evitar componentes client-side quando não forem necessários.
+
+Preferir componentes simples e reduzir JavaScript enviado ao cliente.
+
+## Regra de decisão
+Quando existir uma solução simples utilizando componentes existentes do shadcn/ui, preferi-la.
+
+Quando uma customização for necessária, modificar o componente existente em vez de criar uma implementação paralela.
+
+## Resultado esperado
+Entregar interfaces modernas, profissionais, acessíveis, responsivas, consistentes e fáceis de manter, utilizando shadcn/ui de maneira eficiente e sem dependências desnecessárias.

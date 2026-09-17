@@ -1,0 +1,132 @@
+# SEO Skill
+
+## Objetivo
+Criar aplicações e páginas otimizadas para mecanismos de busca, compartilhamento social e descoberta orgânica, sem prejudicar performance ou experiência do usuário.
+
+## Princípios
+- SEO deve fazer parte da arquitetura desde o início.
+- Priorizar conteúdo real e útil.
+- Não criar SEO artificial ou spam.
+- Não duplicar conteúdo desnecessariamente.
+- Priorizar performance, acessibilidade e semântica.
+
+## Next.js
+Quando o projeto utilizar Next.js:
+- utilizar Metadata API quando apropriado
+- definir title
+- definir description
+- configurar Open Graph
+- configurar Twitter Cards quando necessário
+- utilizar URLs canônicas quando apropriado
+- gerar sitemap quando necessário
+- configurar robots.txt quando necessário
+
+Seguir a arquitetura existente do projeto.
+
+## Titles
+Cada página importante deve possuir um título único, claro e descritivo.
+
+Evitar:
+- títulos genéricos
+- repetição excessiva de palavras-chave
+- títulos artificialmente longos
+
+## Description
+Criar descriptions relevantes para cada página.
+
+A descrição deve explicar claramente o conteúdo da página e incentivar o acesso sem utilizar linguagem artificial.
+
+## Estrutura
+Utilizar hierarquia correta de headings:
+
+- um `h1` principal quando apropriado
+- `h2` para seções
+- `h3` para subseções
+
+Não escolher headings apenas por tamanho visual.
+
+## URLs
+Preferir URLs:
+- curtas
+- descritivas
+- legíveis
+- consistentes
+- sem parâmetros desnecessários
+
+Evitar estruturas confusas.
+
+## Links internos
+Utilizar links internos quando ajudarem o usuário e os mecanismos de busca a compreender a estrutura do site.
+
+Os textos dos links devem ser descritivos.
+
+## Imagens
+Quando relevante:
+- utilizar nomes de arquivos descritivos
+- utilizar `alt` adequado
+- otimizar imagens
+- utilizar formatos modernos quando apropriado
+- evitar imagens desnecessariamente grandes
+
+## Dados estruturados
+Utilizar Schema.org ou JSON-LD quando houver benefício real, como:
+- produtos
+- artigos
+- organizações
+- eventos
+- breadcrumbs
+- avaliações
+
+Não adicionar dados estruturados incorretos ou que não correspondam ao conteúdo real.
+
+## Indexação
+Controlar corretamente:
+- páginas que devem ser indexadas
+- páginas que não devem ser indexadas
+- páginas duplicadas
+- URLs canônicas
+
+Não bloquear conteúdo importante acidentalmente.
+
+## Performance
+SEO nunca deve ser tratado separadamente da performance.
+
+Priorizar:
+- carregamento rápido
+- Core Web Vitals
+- imagens otimizadas
+- JavaScript reduzido
+- HTML semântico
+- boa experiência mobile
+
+## Conteúdo
+Não gerar conteúdo apenas para manipular mecanismos de busca.
+
+Priorizar:
+- clareza
+- relevância
+- originalidade
+- utilidade
+- boa experiência de leitura
+
+## Revisão
+Antes de finalizar uma página, verificar:
+- title
+- description
+- headings
+- URL
+- links internos
+- imagens
+- canonical quando necessário
+- Open Graph
+- indexação
+- performance
+- acessibilidade
+
+## Regra de eficiência
+Não adicionar configurações de SEO que não tenham benefício real para a página.
+
+Preferir uma implementação simples, correta e sustentável.
+
+## Resultado esperado
+Páginas semanticamente corretas, rápidas, acessíveis, rastreáveis e preparadas para SEO moderno, sem excesso de configuração ou técnicas artificiais.

@@ -1,0 +1,206 @@
+# Prompt Efficiency Skill
+
+## Objetivo
+
+Maximizar a eficiência das interações com o modelo, reduzindo contexto desnecessário, repetição, respostas excessivas e alterações de código que não agregam valor.
+
+## Princípio principal
+
+Usar o menor contexto necessário para produzir a melhor solução.
+
+Não repetir informações que já estão disponíveis no contexto do projeto.
+
+Não pedir ou gerar informações que não sejam necessárias para executar a tarefa.
+
+## Antes de responder
+
+Identificar:
+
+1. o objetivo real da tarefa
+2. os arquivos relevantes
+3. as skills realmente necessárias
+4. as informações já disponíveis
+5. o que ainda está faltando
+
+Não analisar arquivos irrelevantes.
+
+Não carregar skills que não tenham relação com a tarefa.
+
+## Seleção de contexto
+
+Utilizar somente as skills relacionadas à tarefa.
+
+Exemplos:
+
+Interface:
+- ui-ux-premium.md
+- accessibility.md
+- tailwindcss.md
+- shadcn-ui.md
+
+React:
+- react.md
+- typescript.md
+- performance.md
+
+Next.js:
+- nextjs.md
+- react.md
+- typescript.md
+- seo.md
+- performance.md
+
+API:
+- api-design.md
+- security.md
+- database.md
+- performance.md
+
+Debugging:
+- debugging.md
+- skill específica da tecnologia envolvida
+
+Não carregar todas as skills simultaneamente quando não forem necessárias.
+
+## Evitar repetição
+
+Não repetir:
+
+- requisitos já fornecidos
+- código já existente
+- explicações anteriores
+- instruções das skills
+- informações que podem ser inferidas do projeto
+
+Se uma informação já estiver disponível, utilizá-la diretamente.
+
+## Leitura de código
+
+Antes de modificar um arquivo:
+
+1. localizar o código relevante
+2. ler somente o contexto necessário
+3. entender dependências próximas
+4. modificar apenas o trecho necessário
+
+Não reescrever arquivos inteiros quando uma alteração localizada resolver o problema.
+
+## Geração de código
+
+Gerar somente o código necessário.
+
+Preferir alterações incrementais.
+
+Não criar:
+
+- arquivos desnecessários
+- funções não utilizadas
+- componentes futuros
+- abstrações especulativas
+- comentários óbvios
+- exemplos que não serão utilizados
+
+## Perguntas
+
+Não fazer perguntas quando a resposta puder ser determinada com segurança pelo projeto.
+
+Se uma informação realmente estiver faltando:
+
+- perguntar somente o necessário
+- fazer a menor quantidade possível de perguntas
+- não interromper o fluxo por detalhes irrelevantes
+
+## Respostas
+
+Ser objetivo.
+
+Quando o usuário pedir implementação:
+
+1. informar brevemente o que será alterado
+2. implementar
+3. informar o resultado
+4. mencionar somente pontos importantes
+
+Não produzir explicações longas sobre código trivial.
+
+## Código existente
+
+Antes de criar algo novo:
+
+1. procurar implementação existente
+2. verificar componentes reutilizáveis
+3. verificar funções existentes
+4. verificar serviços existentes
+5. verificar utilitários existentes
+
+Reutilizar antes de duplicar.
+
+## Contexto progressivo
+
+Não carregar informações desnecessárias antecipadamente.
+
+Quando uma tarefa evoluir:
+
+- manter o contexto relevante
+- descartar mentalmente detalhes que não são mais necessários
+- utilizar somente arquivos relacionados à etapa atual
+
+## Planejamento
+
+Planejar internamente a solução antes de implementar.
+
+Para tarefas pequenas, evitar planos longos.
+
+Para tarefas complexas, dividir em etapas objetivas.
+
+Não transformar tarefas simples em processos complexos.
+
+## Alterações
+
+Preferir:
+
+- menor número de arquivos alterados
+- menor quantidade de código novo
+- menor superfície de mudança
+- maior reutilização
+
+Evitar alterações não relacionadas ao objetivo.
+
+## Erros
+
+Ao corrigir um erro:
+
+- identificar causa
+- modificar somente o necessário
+- verificar impacto
+- evitar reescrever a aplicação
+
+## Dependências
+
+Não instalar uma dependência para resolver algo que possa ser resolvido facilmente com recursos existentes.
+
+Antes de adicionar uma biblioteca, verificar:
+
+1. se o projeto já possui solução
+2. se o framework possui recurso nativo
+3. se uma implementação simples resolve
+
+## Explicações
+
+Explicar somente quando houver valor.
+
+Priorizar:
+
+- decisão
+- motivo
+- consequência
+
+Evitar explicações óbvias.
+
+## Regra de ouro
+
+Se uma solução puder ser feita com menos contexto, menos arquivos, menos código e menos alterações sem perder qualidade, preferir essa solução.
+
+## Resultado esperado
+
+Interações objetivas, contexto enxuto, código menor e mais preciso, menos repetição, menos alterações desnecessárias e maior produtividade durante o desenvolvimento.

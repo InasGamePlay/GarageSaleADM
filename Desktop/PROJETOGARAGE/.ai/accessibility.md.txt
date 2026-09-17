@@ -1,0 +1,119 @@
+# Accessibility Skill
+
+## Objetivo
+Garantir que interfaces e aplicações sejam acessíveis, utilizáveis por teclado, leitores de tela e diferentes dispositivos, sem adicionar complexidade desnecessária.
+
+## Princípios
+- Acessibilidade deve fazer parte da implementação desde o início.
+- Preferir HTML semântico antes de ARIA.
+- Não criar soluções acessíveis artificiais quando HTML nativo resolver.
+- Não sacrificar usabilidade em nome de efeitos visuais.
+
+## HTML semântico
+Utilizar elementos adequados para cada finalidade:
+- header
+- nav
+- main
+- section
+- article
+- aside
+- footer
+- button
+- form
+- label
+- fieldset
+- legend
+
+Não utilizar `div` ou `span` como substitutos de elementos interativos quando houver elemento HTML apropriado.
+
+## Teclado
+Garantir:
+- navegação completa por teclado
+- foco visível
+- ordem de foco lógica
+- botões e controles acessíveis
+- modais que controlam corretamente o foco
+- nenhuma funcionalidade essencial dependente exclusivamente de mouse
+
+Não remover `outline` ou indicadores de foco sem fornecer alternativa adequada.
+
+## Formulários
+Todo campo deve possuir uma identificação clara.
+
+Utilizar:
+- label associado
+- mensagens de erro claras
+- indicação de campos obrigatórios
+- validação compreensível
+- feedback acessível
+
+Não depender somente da cor para indicar erro.
+
+## Imagens
+Imagens informativas devem possuir `alt` descritivo.
+
+Imagens puramente decorativas devem utilizar `alt=""` quando apropriado.
+
+Não escrever descrições redundantes.
+
+## Contraste
+Garantir contraste suficiente entre:
+- texto e fundo
+- elementos interativos e fundo
+- estados de foco
+- mensagens de erro e sucesso
+
+Não utilizar apenas cor para transmitir significado.
+
+## ARIA
+Usar ARIA somente quando necessário.
+
+Preferência:
+1. HTML semântico
+2. comportamento nativo
+3. ARIA quando não existir alternativa adequada
+
+Nunca adicionar atributos ARIA incorretos apenas para "melhorar acessibilidade".
+
+## Componentes
+Componentes interativos devem possuir:
+- nome acessível
+- estado identificável
+- comportamento previsível
+- foco adequado
+- feedback visual e, quando necessário, textual
+
+## Responsividade
+A interface deve permanecer utilizável em diferentes tamanhos de tela e níveis de zoom.
+
+Não criar layouts que dependam de dimensões fixas desnecessárias.
+
+## Conteúdo
+Utilizar:
+- títulos hierárquicos
+- textos claros
+- links descritivos
+- mensagens de erro objetivas
+- instruções compreensíveis
+
+Evitar textos vagos como "clique aqui" quando uma descrição melhor for possível.
+
+## Revisão
+Antes de finalizar uma interface, verificar:
+- teclado
+- foco
+- semântica HTML
+- formulários
+- contraste
+- imagens
+- mensagens de erro
+- responsividade
+- leitores de tela quando aplicável
+
+## Regra de eficiência
+Não adicionar código de acessibilidade redundante.
+
+Utilizar a solução nativa mais simples que resolva corretamente o problema.
+
+## Resultado esperado
+Interfaces acessíveis, semânticas, responsivas e fáceis de utilizar, seguindo boas práticas modernas de acessibilidade sem criar complexidade desnecessária.

@@ -1,0 +1,163 @@
+# Git Workflow Skill
+
+## Objetivo
+
+Trabalhar com Git de forma segura, previsível e organizada, preservando histórico, facilitando revisão e reduzindo risco de perda ou alteração acidental de código.
+
+## Princípio principal
+
+Nunca alterar ou remover código sem entender o impacto.
+
+Preferir mudanças pequenas, rastreáveis e fáceis de revisar.
+
+## Antes de modificar
+
+Verificar quando possível:
+
+- estado atual do repositório
+- arquivos modificados
+- alterações não commitadas
+- branch atual
+- contexto das mudanças
+
+Não sobrescrever alterações existentes do usuário.
+
+## Escopo
+
+Modificar somente arquivos relacionados à tarefa.
+
+Não alterar arquivos sem relação com o objetivo.
+
+Não formatar o projeto inteiro apenas porque uma pequena alteração foi solicitada.
+
+## Alterações existentes
+
+Se houver alterações não relacionadas à tarefa:
+
+- preservá-las
+- não apagá-las
+- não sobrescrevê-las
+- não misturá-las com a nova implementação
+
+Se uma alteração existente impedir a implementação segura, informar o conflito antes de modificá-la.
+
+## Commits
+
+Quando o usuário solicitar um commit:
+
+- criar commits pequenos e coerentes
+- utilizar mensagens claras
+- agrupar somente alterações relacionadas
+
+Exemplos:
+
+- `feat: add user profile`
+- `fix: handle invalid token`
+- `refactor: simplify auth service`
+- `test: add checkout tests`
+- `docs: update setup instructions`
+
+Não criar commits gigantes contendo mudanças não relacionadas.
+
+## Mensagens de commit
+
+Preferir:
+
+`tipo: descrição curta`
+
+Tipos comuns:
+
+- feat
+- fix
+- refactor
+- perf
+- test
+- docs
+- chore
+- build
+- ci
+
+Descrever o que foi alterado de forma objetiva.
+
+## Branches
+
+Quando o projeto utilizar branches:
+
+- respeitar a estratégia existente
+- não criar branches desnecessariamente
+- não alterar a branch sem autorização
+
+## Histórico
+
+Não reescrever histórico sem solicitação explícita.
+
+Não utilizar comandos destrutivos como:
+
+- `git reset --hard`
+- `git clean -fd`
+- `git checkout -- .`
+- `git restore .`
+
+quando houver risco de apagar trabalho do usuário.
+
+## Código não relacionado
+
+Não corrigir problemas encontrados por acaso se eles não forem necessários para a tarefa.
+
+Se forem relevantes para segurança ou funcionamento, informar ao usuário.
+
+## Pull Requests
+
+Quando solicitado a preparar uma alteração para revisão:
+
+- manter escopo pequeno
+- explicar objetivo
+- destacar alterações importantes
+- mencionar testes executados
+- mencionar limitações conhecidas
+
+## Revisão
+
+Antes de considerar a tarefa concluída:
+
+1. verificar arquivos alterados
+2. revisar diferenças
+3. procurar alterações acidentais
+4. verificar código novo
+5. executar testes relevantes
+6. verificar build quando apropriado
+
+## Segurança
+
+Nunca adicionar ao Git:
+
+- senhas
+- tokens
+- chaves privadas
+- arquivos `.env` com segredos
+- credenciais
+- dados pessoais sensíveis
+
+Verificar `.gitignore` quando necessário.
+
+## Regra de eficiência
+
+Não executar comandos Git desnecessários.
+
+Não criar commits automaticamente.
+
+Não criar branches automaticamente.
+
+Não reescrever histórico.
+
+Não apagar alterações do usuário.
+
+## Autonomia
+
+Pode analisar e sugerir comandos Git.
+
+Antes de executar operações potencialmente destrutivas ou irreversíveis, exigir confirmação explícita do usuário.
+
+## Resultado esperado
+
+Um fluxo Git seguro, organizado e previsível, com alterações pequenas, histórico limpo e proteção contra perda acidental de trabalho.

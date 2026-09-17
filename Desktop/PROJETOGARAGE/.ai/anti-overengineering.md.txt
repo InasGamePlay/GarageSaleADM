@@ -1,0 +1,212 @@
+# Anti-Overengineering Skill
+
+## Objetivo
+
+Evitar complexidade desnecessária, abstrações prematuras e arquiteturas maiores do que o problema exige.
+
+## Princípio principal
+
+Resolver o problema real com a menor complexidade que mantenha qualidade, segurança, performance e manutenção adequadas.
+
+Não transformar uma tarefa simples em uma arquitetura complexa.
+
+## Regra de proporcionalidade
+
+A solução deve ser proporcional ao problema.
+
+Problema pequeno:
+- solução pequena
+
+Problema médio:
+- solução modular
+
+Problema complexo:
+- arquitetura estruturada
+
+Não criar complexidade antecipadamente para problemas que ainda não existem.
+
+## Antes de criar algo
+
+Perguntar internamente:
+
+1. Isso é realmente necessário?
+2. O projeto já possui uma solução?
+3. Uma solução mais simples resolveria?
+4. Isso reduz complexidade ou apenas a move para outro lugar?
+5. Essa abstração será reutilizada de verdade?
+6. Existe um requisito atual que justifique isso?
+
+Se a resposta for não, não criar.
+
+## Evitar abstrações prematuras
+
+Não criar automaticamente:
+
+- factories
+- repositories
+- managers
+- wrappers
+- providers
+- services
+- hooks
+- contexts
+- classes
+- sistemas genéricos
+
+apenas porque poderiam ser úteis no futuro.
+
+Criar abstrações quando houver necessidade real.
+
+## Reutilização
+
+Reutilizar código quando houver repetição real.
+
+Não criar uma abstração complexa para evitar duas ou três linhas repetidas quando isso tornar o código menos legível.
+
+## Dependências
+
+Não adicionar biblioteca para resolver algo simples.
+
+Antes de instalar uma dependência:
+
+1. verificar recursos nativos
+2. verificar dependências existentes
+3. verificar se poucas linhas resolvem
+4. avaliar custo de manutenção
+
+Preferir soluções nativas quando forem adequadas.
+
+## Arquitetura
+
+Não mudar a arquitetura existente sem necessidade.
+
+Não introduzir:
+
+- microserviços
+- event-driven architecture
+- filas
+- caches complexos
+- sistemas de plugins
+- múltiplas camadas
+- padrões arquiteturais avançados
+
+sem requisito real que justifique a mudança.
+
+## Escalabilidade
+
+Não otimizar para milhões de usuários quando o requisito atual não exige isso.
+
+Projetar com possibilidade razoável de crescimento, mas evitar complexidade especulativa.
+
+## Performance
+
+Não adicionar:
+
+- memoização
+- cache
+- workers
+- virtualização
+- processamento paralelo
+- otimizações avançadas
+
+sem evidência de que sejam necessárias.
+
+Primeiro criar uma implementação correta e simples.
+
+Depois otimizar gargalos reais.
+
+## Código
+
+Preferir:
+
+- funções simples
+- componentes simples
+- fluxo de dados claro
+- nomes claros
+- poucas dependências
+- poucas camadas
+
+Evitar código excessivamente abstrato.
+
+## Front-end
+
+Não criar um design system inteiro para uma página simples.
+
+Não criar dezenas de componentes para elementos que não serão reutilizados.
+
+Não adicionar animações ou interações apenas para parecer sofisticado.
+
+## Back-end
+
+Não criar múltiplas camadas para um endpoint simples.
+
+Não criar abstrações de banco sem necessidade.
+
+Não criar sistemas de cache, filas ou eventos sem requisito real.
+
+## Configuração
+
+Não adicionar configurações apenas porque "boas arquiteturas fazem isso".
+
+Toda configuração deve possuir uma finalidade clara.
+
+## Comentários
+
+Não justificar complexidade com comentários.
+
+Se o código precisa de uma explicação enorme para justificar sua existência, verificar se existe uma solução mais simples.
+
+## Refatoração
+
+Não refatorar todo o projeto para implementar uma funcionalidade pequena.
+
+Manter o escopo da alteração limitado.
+
+Se uma refatoração maior realmente for necessária, separar a mudança quando possível.
+
+## Futuro
+
+Não implementar funcionalidades futuras sem requisito.
+
+Não criar código para:
+
+- possíveis clientes
+- possíveis integrações
+- possíveis escalas
+- possíveis plataformas
+- possíveis requisitos
+
+que ainda não existem.
+
+## Regra de decisão
+
+Entre duas soluções que resolvem corretamente o problema:
+
+Preferir a que possui:
+
+- menos código
+- menos arquivos
+- menos dependências
+- menos abstrações
+- menos estados
+- menos pontos de falha
+- menor custo de manutenção
+
+desde que segurança, performance e qualidade permaneçam adequadas.
+
+## Exceções
+
+Complexidade é aceitável quando houver justificativa concreta, como:
+
+- requisito de negócio
+- requisito de segurança
+- requisito de performance
+- necessidade comprovada de escala
+- integração externa
+- requisito arquitetural existente
+
+Nesse caso, explicar brevemente o motivo.
+
+## Resultado esperado
+
+Soluções simples, robustas, legíveis e proporcionais ao problema, evitando overengineering e complexidade especulativa.

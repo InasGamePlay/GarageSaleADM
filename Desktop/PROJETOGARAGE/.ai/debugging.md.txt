@@ -1,0 +1,230 @@
+# Debugging Skill
+
+## Objetivo
+
+Investigar, diagnosticar e corrigir problemas de forma sistemática, evitando alterações aleatórias, regressões e código desnecessário.
+
+## Princípio principal
+
+Não corrigir sintomas sem entender a causa.
+
+Antes de modificar o código:
+
+1. identificar o problema
+2. reproduzir o comportamento
+3. localizar a origem
+4. formular uma hipótese
+5. testar a hipótese
+6. aplicar a menor correção necessária
+7. verificar se o problema foi realmente resolvido
+
+## Análise inicial
+
+Ao receber um erro, analisar:
+
+- mensagem de erro
+- stack trace
+- arquivo envolvido
+- linha indicada
+- contexto da execução
+- alterações recentes
+- dependências relacionadas
+- comportamento esperado
+- comportamento atual
+
+Não assumir a causa sem evidências.
+
+## Reprodução
+
+Sempre que possível, criar uma forma mínima de reproduzir o problema.
+
+Reduzir o problema até identificar:
+
+- entrada que causa o erro
+- função envolvida
+- componente envolvido
+- requisição envolvida
+- estado que provoca o comportamento
+
+## Hipóteses
+
+Formular hipóteses baseadas nas evidências disponíveis.
+
+Priorizar hipóteses:
+
+1. mais prováveis
+2. mais fáceis de verificar
+3. com maior impacto
+
+Não fazer várias alterações simultaneamente sem necessidade.
+
+## Logs
+
+Utilizar logs temporários para identificar:
+
+- valores
+- fluxo de execução
+- estado
+- respostas
+- erros
+
+Remover logs de debugging desnecessários antes da entrega.
+
+Nunca registrar:
+
+- senhas
+- tokens
+- chaves privadas
+- informações sensíveis
+
+## Front-end
+
+Investigar:
+
+- estado incorreto
+- props incorretas
+- renderização inesperada
+- efeitos desnecessários
+- eventos
+- chamadas de API
+- problemas de hidratação
+- erros de console
+- problemas de responsividade
+
+Não adicionar `useEffect` apenas para esconder problemas de arquitetura.
+
+## React
+
+Verificar:
+
+- ciclo de renderização
+- dependências de hooks
+- estado duplicado
+- componentes sendo remontados
+- props instáveis
+- keys incorretas
+- efeitos executando excessivamente
+
+Corrigir a causa em vez de adicionar `useMemo` ou `useCallback` sem necessidade.
+
+## Next.js
+
+Verificar:
+
+- Server Component vs Client Component
+- hidratação
+- cache
+- data fetching
+- rotas
+- middleware
+- variáveis de ambiente
+- diferenças entre servidor e navegador
+
+Não transformar um componente em Client Component sem necessidade.
+
+## Backend
+
+Investigar:
+
+- validação
+- autenticação
+- autorização
+- entrada de dados
+- lógica de negócio
+- chamadas externas
+- banco de dados
+- tratamento de erros
+- concorrência
+
+## APIs
+
+Ao investigar uma API, verificar:
+
+1. requisição
+2. headers
+3. parâmetros
+4. body
+5. autenticação
+6. validação
+7. processamento
+8. banco
+9. resposta
+10. código HTTP
+
+## Banco de dados
+
+Verificar:
+
+- query
+- parâmetros
+- schema
+- migrations
+- índices
+- constraints
+- relações
+- N+1
+- dados reais
+
+Não modificar o schema apenas para contornar um erro sem entender a causa.
+
+## Dependências
+
+Antes de adicionar uma nova biblioteca para corrigir um problema:
+
+1. verificar se o projeto já possui solução
+2. verificar se a plataforma já fornece recurso nativo
+3. verificar se poucas linhas de código resolvem o problema
+
+Evitar dependências desnecessárias.
+
+## Correção
+
+A correção deve ser:
+
+- pequena
+- clara
+- localizada
+- compatível com a arquitetura
+- fácil de testar
+- sem efeitos colaterais desnecessários
+
+Não reescrever arquivos inteiros quando uma pequena alteração resolve o problema.
+
+## Regressão
+
+Depois de corrigir:
+
+- verificar o fluxo afetado
+- verificar casos relacionados
+- verificar erros existentes
+- verificar tipos
+- verificar testes
+- verificar build quando apropriado
+
+Garantir que a correção não quebre funcionalidades existentes.
+
+## Quando faltar informação
+
+Se não houver informação suficiente para diagnosticar corretamente:
+
+- declarar o que está faltando
+- pedir somente a informação necessária
+- não inventar comportamento
+- não criar uma solução baseada em suposições frágeis
+
+## Regra de eficiência
+
+Não gerar uma longa explicação antes da correção.
+
+Priorizar:
+
+1. causa provável
+2. evidência
+3. correção
+4. verificação
+
+Explicar detalhes somente quando forem relevantes.
+
+## Resultado esperado
+
+Diagnósticos baseados em evidências e correções pequenas, seguras, previsíveis e fáceis de manter, evitando tentativa e erro desnecessário.
