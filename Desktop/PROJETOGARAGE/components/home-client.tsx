@@ -94,7 +94,7 @@ export function HomeClient() {
     <main className="flex min-h-screen flex-col bg-zinc-50 text-zinc-900">
       <div className="mx-auto flex w-full max-w-md flex-1 flex-col gap-6 px-4 py-6">
         <header className="flex flex-col gap-2">
-          <h1 className="text-2xl font-bold tracking-tight">Garage Sale</h1>
+          <h1 className="text-2xl font-bold tracking-tight">Garage Sale Family</h1>
           <p className="text-sm text-zinc-600">
             Gerencie e encontre objetos perdidos ou à venda.
           </p>
